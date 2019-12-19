@@ -42,12 +42,12 @@ customers (perfect or otherwise) is referred to as the 'entire customers' datase
 The result of the data processing is a set of four .csv files, compressed versions of which are contained in the ./data folder of this repository.
 
 For the 'entire customers', we have the following two datsets:
-(1) ```dailyTotals.csv``` - containing total daily energy consumption for every day of 2013 for all customers 
-(2) ```entireCustomers.csv``` - containing the Acorn designation for all customers
+<br>(1) ```dailyTotals.csv``` - containing total daily energy consumption for every day of 2013 for all customers 
+<br>(2) ```entireCustomers.csv``` - containing the Acorn designation for all customers
 
 For the 'perfect customers', we have the following two datsets:
-(3) ```perfectDailyTotals.csv``` - containing total daily energy consumption for the 'perfect customers'. 
-(4) ```perfectCustomers.csv``` - containing the Acorn designation for the 'perfect customers'.
+<br>(3) ```perfectDailyTotals.csv``` - containing total daily energy consumption for the 'perfect customers'. 
+<br>(4) ```perfectCustomers.csv``` - containing the Acorn designation for the 'perfect customers'.
 
 Each row of the above four datsets is referenced by a unqiue customer 'id'. It is therefore possible to match an energy consumption record contained
 in the 'dailyTotals' datset to an Acorn classification record contained in the 'Customers' dataset.
