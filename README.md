@@ -85,16 +85,19 @@ the model would generalize.
 
 The exact implementation details are given in the accompanying source code.
 
-The result of training the scikit-learn linear SVM using the 'perfect customer' data are shown below for a number of training ratios.
+The result of training the scikit-learn linear SVM using the 'perfect customer' data are shown below for a number of training ratios. For each training ratio, the parameter combination
+[C, gamms] that GridSearchCV calculated as optimal is shown in tandem with four results for each generalization case, 'test' and 'entire' (described previously). The four results are
+taken directly from the classification report (implemented in scikit-learn as ```classification_report```). The parameters concerned are the 'precision', 'recall', 'accuracy' and 'f1-score' values
+associated with the "Affluent" ckass.
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/JerryGreenough/Affluency-Classification-Using-Energy-Time-Series/master/img/linear.png" width="650" height="300">  
+    <img src="https://raw.githubusercontent.com/JerryGreenough/Affluency-Classification-Using-Energy-Time-Series/master/img/linear.png" width="650" height="275">  
 </p>
 
 The result of training the scikit-learn radial basis function SVM using the 'perfect customer' data are shown below for a number of training ratios.
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/JerryGreenough/Affluency-Classification-Using-Energy-Time-Series/master/img/rbf.png" width="650" height="300">  
+    <img src="https://raw.githubusercontent.com/JerryGreenough/Affluency-Classification-Using-Energy-Time-Series/master/img/rbf.png" width="650" height="275">  
 </p>
 
 
