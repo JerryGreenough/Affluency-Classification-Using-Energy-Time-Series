@@ -54,7 +54,15 @@ in the 'dailyTotals' datset to an Acorn classification record contained in the '
 
 ## Data Inspection
 
-![Average monthly energy consumption during a typical day](https://raw.githubusercontent.com/JerryGreenough/Affluency-Classification-Using-Energy-Time-Series/master/img/affluency.png)
+The first five rows of daily total energy consumption are displayed for the first few days of 2013, alongside the associated Acorn classification for the relevant customer.
+A glimpse at the daily energy consumption reveals that a higher affluency ranking does not necessarily indicate a higher energy consumption.
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/JerryGreenough/Affluency-Classification-Using-Energy-Time-Series/master/img/affluency.png" width="600" height="280">  
+</p>
+
+
+
 
 ## Conclusion
 
