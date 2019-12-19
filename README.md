@@ -58,7 +58,7 @@ The first five rows of daily total energy consumption are displayed for the firs
 A glimpse at the daily energy consumption reveals that a higher affluency ranking does not necessarily indicate a higher energy consumption.
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/JerryGreenough/Affluency-Classification-Using-Energy-Time-Series/master/img/affluency.png" width="600" height="280">  
+    <img src="https://raw.githubusercontent.com/JerryGreenough/Affluency-Classification-Using-Energy-Time-Series/master/img/affluency.png" width="600" height="200">  
 </p>
 
 
