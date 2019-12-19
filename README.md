@@ -4,9 +4,12 @@ A project that demonstrates how a household's affluency class can be predicted f
 ## Introduction
 
 The purpose of this project is to apply a Machine learning technique to assess whether SmartMeter energy consumption readings
-for a given customer can be used to derive any information about the customer's economic status. To this end, two different
+for a given customer can be used to predict information about the customer's economic status. To this end, two different
 Support Vector Machines are trained using a subset of daily energy consumption readings as training vectors and a corresponing subset of Acorn classifications as target
 values. The models are then assessed to see how well each can retrieve the known Acorn classification for a set of test vectors that are not contained in the training set.
+
+For the reader who wishes to jump right in, the Python code that was used for this project is contained in the Jupyter notebook ```Affluency_Classification.piynb``` contained
+in the top level of this repository.
 
 The project was initiated by and undertaken with the help of Michael Blackmon (https://www.linkedin.com/in/michael-blackmon-b4431263).
 
@@ -28,7 +31,7 @@ For the purpose of this project we use SmartMeter readings recorded during 2013 
 The data itself contains a number of NaN values and zero values. The dataset used for this project is limited to readings from customers with less than 10% of their 
 data containing NaN or zero values. NaN values are replaced with zeros. Additional cleaning was required to eliminate a number of duplicate records.
 
-Additional data processing was required to create daily total energy usage for each customer. This was achieved using the groupby functionality provided by the Pandas library, 
+Additional data processing was required to create daily total energy usage for each customer. This was achieved using the groupby functionality provided by the Pandas Python library, 
 and resulted in a dataset with 365 numerical features - one feature representing total energy consumption for a particular day in 2013.
 
 Not all customers have a perfect record of energy consumption for 2013 - a perfect record being one for which a meaningful SmartMeter reading is available for the
@@ -39,12 +42,12 @@ customers (perfect or otherwise) is referred to as the 'entire customers' datase
 The result of the data processing is a set of four .csv files, compressed versions of which are contained in the ./data folder of this repository.
 
 For the 'entire customers', we have the following two datsets:
-dailyTotals.csv - containing total daily energy consumption for every day of 2013 for all customers 
-entireCustomers.csv - containing the Acorn designation for all customers
+(1) ```dailyTotals.csv``` - containing total daily energy consumption for every day of 2013 for all customers 
+(2) ```entireCustomers.csv``` - containing the Acorn designation for all customers
 
 For the 'perfect customers', we have the following two datsets:
-perfectDailyTotals.csv - containing total daily energy consumption for the 'perfect customers'. 
-perfectCustomers.csv - containing the Acorn designation for the 'perfect customers'.
+(3) ```perfectDailyTotals.csv``` - containing total daily energy consumption for the 'perfect customers'. 
+(4) ```perfectCustomers.csv``` - containing the Acorn designation for the 'perfect customers'.
 
 Each row of the above four datsets is referenced by a unqiue customer 'id'. It is therefore possible to match an energy consumption record contained
 in the 'dailyTotals' datset to an Acorn classification record contained in the 'Customers' dataset.
