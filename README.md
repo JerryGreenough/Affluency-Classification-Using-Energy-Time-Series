@@ -88,13 +88,13 @@ The exact implementation details are given in the accompanying source code.
 The result of training the scikit-learn linear SVM using the 'perfect customer' data are shown below for a number of training ratios.
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/JerryGreenough/Affluency-Classification-Using-Energy-Time-Series/master/img/linear.png" width="550" height="200">  
+    <img src="https://raw.githubusercontent.com/JerryGreenough/Affluency-Classification-Using-Energy-Time-Series/master/img/linear.png" width="650" height="300">  
 </p>
 
 The result of training the scikit-learn radial basis function SVM using the 'perfect customer' data are shown below for a number of training ratios.
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/JerryGreenough/Affluency-Classification-Using-Energy-Time-Series/master/img/rbf.png" width="550" height="200">  
+    <img src="https://raw.githubusercontent.com/JerryGreenough/Affluency-Classification-Using-Energy-Time-Series/master/img/rbf.png" width="650" height="300">  
 </p>
 
 
