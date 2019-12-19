@@ -54,12 +54,37 @@ in the 'dailyTotals' datset to an Acorn classification record contained in the '
 
 ## Data Inspection
 
-The first five rows of daily total energy consumption are displayed for the first few days of 2013, alongside the associated Acorn classification for the relevant customer.
+The first five rows of daily total energy consumption are displayed for the first few days of 2013 alongside the associated Acorn classification for the relevant customer.
 A glimpse at the daily energy consumption reveals that a higher affluency ranking does not necessarily indicate a higher energy consumption.
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/JerryGreenough/Affluency-Classification-Using-Energy-Time-Series/master/img/affluency.png" width="550" height="183">  
 </p>
+
+## Machine Learning
+
+The objective of the project is to use a customer's energy consumption profile (taken throughout the year 2013) in order to determine whether the customer
+is "Affluent" or "Non-Affluent". This amounts to a binary classiciation problem using the 365 numerical features comprising the daily energy consumption figures. 
+In order to accomplish this, it was decided to use the Support Vector Machine (SVM) functionality provided by the ```scikit-learn``` package. In particular, two
+kernel functions were employed; the linear kernal function and the radial basis function. 
+
+Both kernel functions were run for a variety of soft margin parameters (C) 
+and in the case of the radial basis function influence parameter (gamma). This can be done quite readily using the ```GridSearchCV``` function provided by the scikit-learn 
+package. The following code snippet illustrates the fact that 3-fold cross-validation was used when assessing each parameter combination. Furthermore, the ```njobs=-1``` specification
+ensured that all available processors were used in running the job on parallel processors.
+
+    ```grid = GridSearchCV(model, param_grid, verbose=3, n_jobs=-1, cv=3)
+    grid.fit(X_train, y_train)```
+
+In addition to searching for the optimal parameter combination using ```GridSearchCV```, training took place on datasets with a variety of ratios for Non-Affluency count to Affluency count (
+henceforth referred to as the 'training ratio').
+
+All training was done using vectors taken from the 'perfect customer' dataset. Once a dataset with the correct training ratio had been identified, a test-train split of 0.25:0.75 was employed.
+Once training had taken place, the resulting model was assessed against (i) the test portion taken from the 'perfect customer' dataset and thereafter (ii) the entire dataset in order to see how well
+the model would generalize.
+
+
+The exact implementation details are given in the accompanying source code.
 
 
 
