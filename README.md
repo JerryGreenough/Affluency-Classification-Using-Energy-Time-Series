@@ -8,7 +8,7 @@ for a given customer can be used to predict information about the customer's eco
 Support Vector Machines are trained using a subset of daily energy consumption readings as training vectors and a corresponing subset of Acorn classifications as target
 values. The models are then assessed to see how well each can retrieve the known Acorn classification for a set of test vectors that are not contained in the training set.
 
-For the reader who wishes to jump right in, the Python code that was used for this project is contained in the Jupyter notebook ```Affluency_Classification.piynb``` contained
+For the reader who wishes to jump right in, the Python code that was used for this project is contained in the Jupyter notebook ```Affluency_Classification.ipynb``` contained
 in the top level of this repository.
 
 The project was initiated by and undertaken with the help of Michael Blackmon (https://www.linkedin.com/in/michael-blackmon-b4431263).
@@ -39,7 +39,7 @@ entirity of 2013. Comments contained in the accompanying source code as well as 
 for whom a perfect half-hourly record of energy consumption is available as the 'perfect customers' dataset. The complete set of 
 customers (perfect or otherwise) is referred to as the 'entire customers' dataset.
 
-The result of the data processing is a set of four .csv files, compressed versions of which are contained in the ./data folder of this repository.
+The result of the data processing is a set of four .csv files, compressed versions of which are contained in the ```./data folder``` of this repository.
 
 For the 'entire customers', we have the following two datsets:
 <br>(1) ```dailyTotals.csv``` - containing total daily energy consumption for every day of 2013 for all customers 
@@ -51,4 +51,12 @@ For the 'perfect customers', we have the following two datsets:
 
 Each row of the above four datsets is referenced by a unqiue customer 'id'. It is therefore possible to match an energy consumption record contained
 in the 'dailyTotals' datset to an Acorn classification record contained in the 'Customers' dataset.
+
+## Data Inspection
+
+![Average monthly energy consumption during a typical day](https://raw.githubusercontent.com/JerryGreenough/Affluency-Classification-Using-Energy-Time-Series/master/img/affluency.png)
+
+## Conclusion
+
+
 
