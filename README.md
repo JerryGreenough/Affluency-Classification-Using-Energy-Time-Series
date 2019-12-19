@@ -73,8 +73,8 @@ and in the case of the radial basis function influence parameter (gamma). This c
 package. The following code snippet illustrates the fact that 3-fold cross-validation was used when assessing each parameter combination. Furthermore, the ```njobs=-1``` specification
 ensured that all available processors were used in running the job on parallel processors.
 
-    ```grid = GridSearchCV(model, param_grid, verbose=3, n_jobs=-1, cv=3)
-    grid.fit(X_train, y_train)```
+    grid = GridSearchCV(model, param_grid, verbose=3, n_jobs=-1, cv=3)
+    grid.fit(X_train, y_train)
 
 In addition to searching for the optimal parameter combination using ```GridSearchCV```, training took place on datasets with a variety of ratios for Non-Affluency count to Affluency count (
 henceforth referred to as the 'training ratio').
@@ -83,9 +83,19 @@ All training was done using vectors taken from the 'perfect customer' dataset. O
 Once training had taken place, the resulting model was assessed against (i) the test portion taken from the 'perfect customer' dataset and thereafter (ii) the entire dataset in order to see how well
 the model would generalize.
 
-
 The exact implementation details are given in the accompanying source code.
 
+The result of training the scikit-learn linear SVM using the 'perfect customer' data are shown below for a number of training ratios.
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/JerryGreenough/Affluency-Classification-Using-Energy-Time-Series/master/img/linear.png" width="550" height="200">  
+</p>
+
+The result of training the scikit-learn radial basis function SVM using the 'perfect customer' data are shown below for a number of training ratios.
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/JerryGreenough/Affluency-Classification-Using-Energy-Time-Series/master/img/rbf.png" width="550" height="200">  
+</p>
 
 
 
