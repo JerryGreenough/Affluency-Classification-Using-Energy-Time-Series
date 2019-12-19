@@ -87,22 +87,37 @@ The exact implementation details are given in the accompanying source code.
 
 The result of training the scikit-learn linear SVM using the 'perfect customer' data are shown below for a number of training ratios. For each training ratio, the parameter combination
 [C, gamms] that GridSearchCV calculated as optimal is shown in tandem with four results for each generalization case, 'test' and 'entire' (described previously). The four results are
-taken directly from the classification report (implemented in scikit-learn as ```classification_report```). The parameters concerned are the 'precision', 'recall', 'accuracy' and 'f1-score' values
-associated with the "Affluent" ckass.
+taken directly from the classification report (implemented in scikit-learn as ```classification_report```). The assessment results concerned are the 'precision', 'recall', 'accuracy' and 'f1-score' values
+associated with the "Affluent" class.
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/JerryGreenough/Affluency-Classification-Using-Energy-Time-Series/master/img/linear.png" width="650" height="275">  
+    <img src="https://raw.githubusercontent.com/JerryGreenough/Affluency-Classification-Using-Energy-Time-Series/master/img/linear.png" width="650" height="255">  
 </p>
 
 The result of training the scikit-learn radial basis function SVM using the 'perfect customer' data are shown below for a number of training ratios.
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/JerryGreenough/Affluency-Classification-Using-Energy-Time-Series/master/img/rbf.png" width="650" height="275">  
+    <img src="https://raw.githubusercontent.com/JerryGreenough/Affluency-Classification-Using-Energy-Time-Series/master/img/rbf.png" width="650" height="255">  
 </p>
 
 
 
 ## Conclusion
+
+An inspection of the f1-scores for the "Affluent" category suggests that the radial basis function SVM generally out-performs the linear SVM when generalized to the entire dataset.
+The top f1 score occurs with the rbf SVM for a training ratio of 0.9 (C = 1.0, gamma = 0.000562 = 10^-3.25). This is not an unexpected result when considering the observation from earlier
+that a higher affluency ranking is not necessarily an indicator of high energy usage.
+
+Not surprisingly, the optimal models for each training ratio generalize far better to the test set taken from the
+'perfect customer' data set. For instance, for a training ratio of 0.7, the Affluency precision is 0.64 and the recall is 0.84. 
+Moreover, the performance of the model increases as the training ratio reduces. 
+
+The overall conclusion is that the SVM approach, when used with an rbf kernel function, provides a reasonable means of predicting customer affluence - particularly for the case in 
+which we attempt to predict affluency for customers with a perfect set of energy consumption readings. 
+A recall figure of over 0.8 (in tandem with a precision figure of 0.63) for the case in which a training ratio of 0.7 is employed suggests that
+the method can capture most of the Affluent customers, withoutaccumulating a prohibitive number of non-Affluent customers along the way.
+
+
 
 
 
