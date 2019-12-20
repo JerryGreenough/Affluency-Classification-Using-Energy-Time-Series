@@ -91,7 +91,7 @@ taken directly from the classification report (implemented in scikit-learn as ``
 associated with the "Affluent" class.
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/JerryGreenough/Affluency-Classification-Using-Energy-Time-Series/master/img/linear.png" width="650" height="255">  
+    <img src="https://raw.githubusercontent.com/JerryGreenough/Affluency-Classification-Using-Energy-Time-Series/master/img/linear.png" width="620" height="255">  
 </p>
 
 The result of training the scikit-learn radial basis function SVM using the 'perfect customer' data are shown below for a number of training ratios.
@@ -105,7 +105,7 @@ The result of training the scikit-learn radial basis function SVM using the 'per
 ## Conclusion
 
 An inspection of the f1-scores for the "Affluent" category suggests that the radial basis function SVM generally out-performs the linear SVM when generalized to the entire dataset.
-The top f1 score occurs with the rbf SVM for a training ratio of 0.9 (C = 1.0, gamma = 0.000562 = 10^-3.25). This is not an unexpected result when considering the observation from earlier
+The top f1 score occurs with the rbf SVM for a training ratio of 0.9 (C = 1.0, /u03B3 = 0.000562 = 10^-3.25). This is not an unexpected result when considering the observation from earlier
 that a higher affluency ranking is not necessarily an indicator of high energy usage.
 
 Not surprisingly, the optimal models for each training ratio generalize far better to the test set taken from the
