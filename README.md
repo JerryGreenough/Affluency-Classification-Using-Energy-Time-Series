@@ -69,7 +69,7 @@ In order to accomplish this, it was decided to use the Support Vector Machine (S
 kernel functions were employed; the linear kernal function and the radial basis function. 
 
 Both kernel functions were run for a variety of soft margin parameters (C) 
-and in the case of the radial basis function influence parameter (gamma). This can be done quite readily using the ```GridSearchCV``` function provided by the scikit-learn 
+and in the case of the radial basis function influence parameter (&gamma;). This can be done quite readily using the ```GridSearchCV``` function provided by the scikit-learn 
 package. The following code snippet illustrates the fact that 3-fold cross-validation was used when assessing each parameter combination. Furthermore, the ```njobs=-1``` specification
 ensured that all available processors were used in running the job on parallel processors.
 
