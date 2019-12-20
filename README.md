@@ -86,7 +86,7 @@ the model would generalize.
 The exact implementation details are given in the accompanying source code.
 
 The result of training the scikit-learn linear SVM using the 'perfect customer' data are shown below for a number of training ratios. For each training ratio, the parameter combination
-[C, gamms] that GridSearchCV calculated as optimal is shown in tandem with four results for each generalization case, 'test' and 'entire' (described previously). The four results are
+[C, &gamma;] that GridSearchCV calculated as optimal is shown in tandem with four results for each generalization case, 'test' and 'entire' (described previously). The four results are
 taken directly from the classification report (implemented in scikit-learn as ```classification_report```). The assessment results concerned are the 'precision', 'recall', 'accuracy' and 'f1-score' values
 associated with the "Affluent" class.
 
@@ -105,7 +105,7 @@ The result of training the scikit-learn radial basis function SVM using the 'per
 ## Conclusion
 
 An inspection of the f1-scores for the "Affluent" category suggests that the radial basis function SVM generally out-performs the linear SVM when generalized to the entire dataset.
-The top f1 score occurs with the rbf SVM for a training ratio of 0.9 (C = 1.0, &gamma; = 0.000562 = 10^-3.25). This is not an unexpected result when considering the observation from earlier
+The top f1 score occurs with the rbf SVM for a training ratio of 0.9 (C = 1.0, &gamma; = 0.000562 = 10<sup>-3.25</sup>). This is not an unexpected result when considering the observation from earlier
 that a higher affluency ranking is not necessarily an indicator of high energy usage.
 
 Not surprisingly, the optimal models for each training ratio generalize far better to the test set taken from the
